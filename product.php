@@ -193,6 +193,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_review'])) {
         </div>
     </div>
 
+    <footer style="padding: 60px 0; border-top: 1px solid var(--border); margin-top: 80px;">
+        <div class="container" style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;">
+            <div>
+                <a href="#" class="logo" style="margin-bottom: 20px; display: block;">SNEAKERVAULT</a>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">Tu destino favorito para calzado exclusivo. Llevamos el estilo a tu puerta con la seguridad de WhatsApp.</p>
+                <div style="padding: 15px; border-radius: 15px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(255,255,255,0.1);">
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Página realizada por:</p>
+                    <p style="font-weight: 600; color: var(--text);">By Andres Martinez - Ingeniero de sistemas</p>
+                    <a href="https://wa.me/573226327178" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; margin-top: 5px;">
+                        <i class="fa-brands fa-whatsapp"></i> +57 322 632 7178
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4>Enlaces</h4>
+                <ul style="list-style: none; margin-top: 15px;">
+                    <li><a href="index.php" style="color: var(--text-muted); text-decoration: none;">Inicio</a></li>
+                    <li><a href="contact.php" style="color: var(--text-muted); text-decoration: none;">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Social</h4>
+                <div style="display: flex; gap: 15px; margin-top: 15px;">
+                    <a href="#" class="glass" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--text);"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="glass" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--text);"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="assets/js/cart.js"></script>
 </body>
 </html>

@@ -151,8 +151,14 @@ $products = $stmt->fetchAll();
         <div class="container" style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;">
             <div>
                 <a href="#" class="logo" style="margin-bottom: 20px; display: block;">SNEAKERVAULT</a>
-                <p style="color: var(--text-muted);">Tu destino favorito para calzado exclusivo. Llevamos el estilo a tu
-                    puerta con la seguridad de WhatsApp.</p>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">Tu destino favorito para calzado exclusivo. Llevamos el estilo a tu puerta con la seguridad de WhatsApp.</p>
+                <div style="padding: 15px; border-radius: 15px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(255,255,255,0.1);">
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Página realizada por:</p>
+                    <p style="font-weight: 600; color: var(--text);">By Andres Martinez - Ingeniero de sistemas</p>
+                    <a href="https://wa.me/573226327178" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; margin-top: 5px;">
+                        <i class="fa-brands fa-whatsapp"></i> +57 322 632 7178
+                    </a>
+                </div>
             </div>
             <div>
                 <h4>Enlaces</h4>
