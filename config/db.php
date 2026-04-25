@@ -7,11 +7,11 @@ $dbUrl = getenv('DATABASE_URL');
 if ($dbUrl) {
     // Formato: postgresql://user:pass@host:port/dbname
     $p = parse_url($dbUrl);
-    $host = $p['host'];
+    $host = $p['host'] ?? '';
     $port = $p['port'] ?? 5432;
-    $user = $p['user'];
-    $pass = $p['pass'];
-    $dbname = ltrim($p['path'], '/');
+    $user = isset($p['user']) ? urldecode($p['user']) : '';
+    $pass = isset($p['pass']) ? urldecode($p['pass']) : '';
+    $dbname = isset($p['path']) ? ltrim($p['path'], '/') : '';
 } else {
     // Valores por defecto para Local (Docker)
     $host = getenv('DB_HOST') ?: 'db';
@@ -23,7 +23,7 @@ if ($dbUrl) {
 
 try {
     // Construir DSN para PostgreSQL
-    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
+    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;sslmode=require";
     $pdo = new PDO($dsn, $user, $pass);
     
     // Configuraciones de seguridad y error

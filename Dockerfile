@@ -15,3 +15,6 @@ COPY . /var/www/html/
 RUN mkdir -p /var/www/html/uploads && chown -R www-data:www-data /var/www/html/uploads
 
 WORKDIR /var/www/html/
+
+# Use the PORT environment variable if provided (for Railway/Render), default to 80
+CMD sed -i "s/80/${PORT:-80}/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf && apache2-foreground
